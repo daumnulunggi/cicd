@@ -25,7 +25,7 @@ public class CICDCont {
     } else if (sw == 0) {
       msg = "/cide 호출됨, warn 로그";
       log.warn(msg);
-    } else if (sw == 1) {
+    } else if (sw == 1) { 
       msg = "/cicd 호출됨, info 로그";
       log.info(msg);
     } else if (sw == 2) {
