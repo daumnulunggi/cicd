@@ -13,6 +13,8 @@ public class CICDCont {
   // http://localhost:9091/cicd?sw=1
   // http://localhost:9091/cicd?sw=0
   // http://localhost:9091/cicd?sw=2
+  // http://localhost:9091/cicd?sw=3
+  // http://3.34.236.207:9091/cicd?sw=3
   @GetMapping("/cicd")
   public String cicd(@RequestParam(defaultValue = "1") Integer sw) {
     String msg = "";
@@ -28,6 +30,9 @@ public class CICDCont {
       log.info(msg);
     } else if (sw == 2) {
       msg = "/cide workflow 테스트";
+      log.info(msg);
+    } else if (sw == 3) {
+      msg = "/cicd Github action + EC2 최종 테스트 1";
       log.info(msg);
     }
     
