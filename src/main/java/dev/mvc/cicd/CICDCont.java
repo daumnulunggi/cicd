@@ -29,7 +29,11 @@ public class CICDCont {
     }else if (sw == 1) {
       msg = "/cicd 호출됨, info 로그";
       log.info(msg);
+    } else if (sw == 2) {
+      msg = "/cide workflow 테스트";
+      log.info(msg);
     }
+    
     return "<h3>" + msg + "</h3>";
   }
 }
