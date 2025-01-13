@@ -23,19 +23,17 @@ public class CICDCont {
     if (sw == -1) {
       msg = "/cide 호출됨, error 로그";
       log.error(msg);
-      
-      try {
-        int div = 5/0;
-      }catch (Exception e) {
-        log.error(e.toString());
-      }
     } else if (sw == 0) {
       msg = "/cide 호출됨, warn 로그";
       log.warn(msg);
-    }else if (sw == 1) {
+    } else if (sw == 1) {
       msg = "/cicd 호출됨, info 로그";
       log.info(msg);
+    } else if (sw == 2) {
+      msg = "/cide workflow 테스트";
+      log.info(msg);
     }
+    
     return "<h3>" + msg + "</h3>";
   }
 }
